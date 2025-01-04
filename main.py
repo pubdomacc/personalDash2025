@@ -31,6 +31,6 @@ with st.form(key="duf_workout") :
 
 	submit_button = st.form_submit_button("Submit Data")
 	if submit_button :
-		#if not all(duf_data_input.values()):
-		if (duf_data_input.values()).contains(None):
+		if not all(duf_data_input.values()):
+		#if (duf_data_input.values()).contains(None):
 			st.warning("Please fill in all the fields")
