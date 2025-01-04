@@ -29,7 +29,7 @@ with st.form(key="duf_workout") :
 	duf_data_input["fat"] = st.number_input("Enter your morning fat % :")
 	duf_data_input["water"] = st.number_input("Enter your morning water % :")
 	duf_data_input["muscle"] = st.number_input("Enter your morning muscle % :")
-	duf_data_input["exercise_status"] = stradio(
+	duf_data_input["exercise_status"] = st.radio(
 	    "Did you Workout today?",
 	    [":rainbow[YES!]", "Nope"],
 	    index=None,
