@@ -18,7 +18,9 @@ duf_data_input = {
 	"weight" : None,
 	"fat" : None,
 	"water" : None,
-	"muscle" : None
+	"muscle" : None,
+	"exercise_status" : None,
+	"exercise_type" : None
 }
 
 with st.form(key="duf_workout") :
@@ -27,16 +29,17 @@ with st.form(key="duf_workout") :
 	duf_data_input["fat"] = st.number_input("Enter your morning fat % :")
 	duf_data_input["water"] = st.number_input("Enter your morning water % :")
 	duf_data_input["muscle"] = st.number_input("Enter your morning muscle % :")
-	options = st.multiselect(
-	    "What are your favorite colors",
-	    ["Green", "Yellow", "Red", "Blue"],
-	    ["Yellow", "Red"],
-		)	
-	exercise = st.radio(
+	duf_data_input["exercise_status"] = stradio(
 	    "Did you Workout today?",
-	    [":rainbow[YES!]", "***Thinking Nervously***", "Nope :movie_camera:"],
+	    [":rainbow[YES!]", "Nope"],
 	    index=None,
 		)
+	duf_data_input["exercise_type"] = st.multiselect(
+	    "Choose exercises you've done today",
+	    ["Treadmill/Cardio", "Morning Walk", "Body Weight", "Yoga", "Weights exercise"],
+	    ["Morning Walk", "Weights exercise"],
+		)	
+
 
 
 	submit_button = st.form_submit_button("Submit Data")
@@ -51,6 +54,6 @@ with st.form(key="duf_workout") :
 			for (key,value) in duf_data_input.items() :
 				st.write(key, " : ", value)
 			st.write("#### multiselect output test :")
-			for i in options :
-				st.write(i, " ")
-			st.write("#### radio output test : ", exercise)
+			#for i in options :
+			#	st.write(i, " ")
+			#st.write("#### radio output test : ", exercise)
