@@ -22,7 +22,7 @@ duf_data_input = {
 }
 
 with st.form(key="duf_workout") :
-	duf_data_input["date"] = st.date_input("What's today's date?")
+	duf_data_input["date"] = st.date_input("What's today's date?", max_value = "today", format="YYYY-MM-DD")
 	duf_data_input["weight"] = st.number_input("Enter your morning weight :")
 	duf_data_input["fat"] = st.number_input("Enter your morning fat % :")
 	duf_data_input["water"] = st.number_input("Enter your morning water % :")
@@ -34,3 +34,9 @@ with st.form(key="duf_workout") :
 		if not all(duf_data_input.values()):
 		#if (duf_data_input.values()).contains(None):
 			st.warning("Please fill in all the fields")
+		else : 
+			st.success ("Thank you for today's input!")
+			st.balloons()
+			st.write("#### Info :")
+			for (key,value) in duf_data_input.items() :
+				st.write(key, " : ", value)
