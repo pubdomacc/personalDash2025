@@ -30,11 +30,11 @@ if (st.button("Input Data")) :
 	st.write("Will Input Data Here")
 	#will call input data form page here
 	pg = st.navigation ([inputForm])
+	pg.run()
 
 if (st.button("Go to Dashboard")) :
 	st.session_state.page_State = "Dashboard"
 	st.write("Will Go to Dashboard page")
 	#will call dashboard data here
 	pg = st.navigation([Dashboard])
-
-#pg.run()
+	pg.run()
