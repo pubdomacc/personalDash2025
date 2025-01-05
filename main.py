@@ -7,7 +7,7 @@ page_State = None
 if "page_State" not in st.session_state:
 	st.session_state.page_State = None
 
-st.logo("images/horizontal_blue.png", icon_image="images/icon_blue.png")
+#st.logo("images/horizontal_blue.png", icon_image="images/icon_blue.png")
 
 
 #Functions
