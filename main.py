@@ -37,4 +37,4 @@ if (st.button("Go to Dashboard")) :
 	#will call dashboard data here
 	pg = st.navigation([Dashboard])
 
-pg.run()
+#pg.run()
