@@ -48,7 +48,7 @@ with st.form(key="duf_workout") :
 
 
 	submit_button = st.form_submit_button("Submit Data")
-	st.write("state : " : submit_button)
+	st.write("state : ", submit_button)
 	if submit_button :
 		if not all(duf_data_input.values()):
 		#if (duf_data_input.values()).contains(None):
