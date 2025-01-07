@@ -71,3 +71,4 @@ with st.form(key="duf_workout") :
 			#	st.write(i, " ")
 			#st.write("#### radio output test : ", exercise)
 			st.write(duf_data_input.values())
+			df.to_csv(value, mode='a')
