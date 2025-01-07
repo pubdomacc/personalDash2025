@@ -70,4 +70,4 @@ with st.form(key="duf_workout") :
 			#for i in options :
 			#	st.write(i, " ")
 			#st.write("#### radio output test : ", exercise)
-							
+			st.write(duf_data_input.values())
