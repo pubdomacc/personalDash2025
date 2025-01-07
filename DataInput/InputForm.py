@@ -2,8 +2,8 @@ import streamlit as st
 
 st.write("Form Input goes here")
 
-if st.button("Home Button") :
-	st.write("Goes Home")
+#if st.button("Home Button") :
+#	st.write("Goes Home")
 
 
 def mainFunc():
