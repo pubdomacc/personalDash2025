@@ -1,10 +1,15 @@
 import streamlit as st
+import pandas as pd
 
 st.write("Form Input goes here")
 
 if st.button("Home Button") :
 	st.write("Goes Home")
 
+
+def load_data():
+	df = pd.read_csv("DataForm.csv")
+	return df
 
 def mainFunc():
 	#If pressed the state would be True
@@ -17,6 +22,9 @@ def mainFunc():
 
 
 st.title("Daily Update Form - Workout")
+df = load_data()
+st.write(df)
+
 
 duf_data_input = {
 	"date" : None,
